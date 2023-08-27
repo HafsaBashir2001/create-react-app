@@ -1,0 +1,20 @@
+.spinner-border {
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+    border: 0.75em solid #18e833;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: spinner-border 2.75s linear infinite;
+  }
+  
+  @keyframes spinner-border {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+.loader{
+    display: grid;
+    justify-content: center;
+}
