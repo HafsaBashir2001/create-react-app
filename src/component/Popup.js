@@ -12,9 +12,9 @@ function PopupComponent() {
       {showPopup && (
         <div className="popup-container">
           <div className="popup">
-            <h2>Disclaimer</h2>
-            <p>We do not use your image or share it with any third parties. Your image is privately saved in our system and used only for the purpose of skin analysis.</p>
-            <button onClick={handleAccept}>Accept</button>
+            <h2 style={{color: 'white'}}>Disclaimer</h2>
+            <p style={{color:'white'}}>We do not use your image or share it with any third parties. Your image is privately saved in our system and used only for the purpose of skin analysis.</p>
+            <button style={{color:'blue'}} onClick={handleAccept}>Accept</button>
           </div>
         </div>
       )}
