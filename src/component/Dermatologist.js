@@ -2,7 +2,10 @@
 import ChatWindow from './ChatWindow';
 import React, { useState, createContext } from 'react';
 import img from './derma.jpg'
+import giff from './moving.gif'
 export const ChatContext = createContext();
+
+
 
 function Dermatologist() {
   const [messages, setMessages] = useState([]);
@@ -29,10 +32,27 @@ function Dermatologist() {
   };
  
 
-
+  const containerStyle = {
+    margin: '20px',
+    fontFamily: 'Arial, sans-serif',
+  };
   
   return (
     <>
+     <div style={containerStyle}>
+    <img
+src={giff}
+alt="Hello Future GIF"
+style={{
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  width: '100%',
+  height: '100%',
+  objectFit: 'cover',
+  zIndex: -1,
+}}
+/>
     <div>
 <h2>Skin Queries</h2>
 <img src={img} alt="" />
@@ -56,6 +76,7 @@ function Dermatologist() {
     </div>
     </ChatContext.Provider>
 
+    </div>
     </>
   );
 }

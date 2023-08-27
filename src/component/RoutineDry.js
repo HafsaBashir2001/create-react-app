@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { PDFDownloadLink, Document, Page, Text, StyleSheet } from '@react-pdf/renderer';
 import jsPDF from 'jspdf';
-
+import giff from './moving.gif'
 import './Styles/Routine_Dry.css';
 
 const RoutineDry = ({ fileUrl }) => {
@@ -41,7 +41,10 @@ const handleProductSelection = (product) => {
     window.open(product.url, '_blank'); // Open the product URL in a new tab
   }
 };
-
+const containerStyle = {
+  margin: '20px',
+  fontFamily: 'Arial, sans-serif',
+};
 
  // Function to handle category selection
 //  const handleCategorySelection = (category) => {
@@ -81,6 +84,20 @@ const handleDownloadPDF = () => {
 
 
 return (
+  <div style={containerStyle}>
+    <img
+src={giff}
+alt="Hello Future GIF"
+style={{
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  width: '100%',
+  height: '100%',
+  objectFit: 'cover',
+  zIndex: -1,
+}}
+/>
 <div className="routine-dry-container">
 <h2>Dry Skin Care Routine</h2>
 <p>Follow these steps to take care of your dry skin:</p>
@@ -266,6 +283,7 @@ return (
       <button onClick={handleDownloadPDF}>Download PDF</button>
     </div>
   )}
+</div>
 </div>
 );
 };

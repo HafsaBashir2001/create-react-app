@@ -4,8 +4,13 @@ import RoutineDry from './RoutineDry';
 import { useNavigate } from 'react-router-dom';
 import useFileUrl from './upload';
 import { Link } from 'react-router-dom';
+import giff from './moving.gif'
 
 
+const containerStyle = {
+  margin: '20px',
+  fontFamily: 'Arial, sans-serif',
+};
 
 const DryProducts = ({ skinType }) => {
   const [recommendedProducts, setRecommendedProducts] = useState([]);
@@ -80,6 +85,20 @@ const handleSkincareRoutineClick = () => {
 
 
   return (
+    <div style={containerStyle}>
+    <img
+src={giff}
+alt="Hello Future GIF"
+style={{
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  width: '100%',
+  height: '100%',
+  objectFit: 'cover',
+  zIndex: -1,
+}}
+/>
     <div className="heading">
       <h3 className="text-center" style={{ color: 'white' }}>
         SkinCare Products for Dry Skin
@@ -268,7 +287,7 @@ const handleSkincareRoutineClick = () => {
       </div>
 
       </div>
-
+     </div>
 
 
 

@@ -1,15 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import img from './Styles/logo.png'
-
+import giff from './moving.gif'
 
 export default function Navbar() {
   return (
     <>
     
-    <nav className="navbar navbar-expand-lg " style={{ color:"white"}}>
-    <div  className="container-fluid">
-    <Link className="navbar-brand" to="/" style={{ textDecoration: "none"}}>
+    <nav className="navbar navbar-expand-lg " style={{ color:"white, "}}>
+    <div  className="container-fluid ,">
+    <Link className="navbar-brand" to="/" style={{ textDecoration: "none", }}>
     <img src={img} alt="Logo" style={{width: "85%"}} />
 </Link>
 

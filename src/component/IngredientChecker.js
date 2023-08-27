@@ -1,8 +1,16 @@
 import React, { useState } from 'react';
-
+import giff from './moving.gif'
+import './ingredientchecker.css'
 export default function IngredientChecker() {
   const [text, setText] = useState('');
   const [result, setResult] = useState('');
+
+
+  const containerStyle = {
+    margin: '20px',
+    fontFamily: 'Arial, sans-serif',
+  };
+
 
   const AcneIngredients = [
     'alcohol',
@@ -120,13 +128,24 @@ export default function IngredientChecker() {
   };
 
   return (
-    <div className="container" style={{ position: 'relative', overflow: 'hidden' }}>
-      <div className="background" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1 }}>
-        <video autoPlay loop muted className="bg-video" style={{ width: '100%', height: '100%', objectFit: 'cover' }}>
-          <source src="https://i.gifer.com/QWc9.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
+   <>
+    
+       {/* <img src={giff} alt="Background GIF" style={backgroundStyle} /> */}
+    
+       <div style={containerStyle}>
+      <img
+  src={giff}
+  alt="Hello Future GIF"
+  style={{
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+    zIndex: -1,
+  }}
+/>
       <div className="detail">
         
         <h3 style={{ marginTop: '100px', color: 'white' }}>Let's Analyze the Ingredients</h3>
@@ -141,19 +160,23 @@ export default function IngredientChecker() {
         Enter Ingredient Name
       </h3>
 
-      <form onSubmit={handleSubmit}>
+      <form     style={{ backgroundImage: `url(${giff})`, backgroundSize: 'cover' }}
+ onSubmit={handleSubmit}>
         <input
           className="form-control form-control-lg my-3"
           type="text"
           value={text}
+          
           onChange={handleInputChange}
           placeholder="Enter ingredient name"
         />
         <button className="btn btn-primary" type="submit">
           Check
         </button>
-        <p>{result}</p>
+        <p     style={{ backgroundImage: `url(${giff})`, backgroundSize: 'cover' }}
+ >{result}</p>
       </form>
-    </div>
+      </div>
+      </>
   );
 }

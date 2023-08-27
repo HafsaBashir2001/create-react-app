@@ -119,7 +119,7 @@ const FileUpload = () => {
 
   return (
     <>
-      <PopupComponent />
+      {/* <PopupComponent /> */}
       <div className="container w-100 m-5">
         <div class=" ">
         
