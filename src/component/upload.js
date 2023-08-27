@@ -34,7 +34,10 @@ const FileUpload = () => {
   const navigate = useNavigate();
 
 
-
+  const containerStyle = {
+    margin: '20px',
+    fontFamily: 'Arial, sans-serif',
+  };
 
   const handleUploadAndPredict = async (event) => {
     event.preventDefault();
@@ -119,6 +122,20 @@ const FileUpload = () => {
 
   return (
     <>
+     <div style={containerStyle}>
+  <img
+src={giff}
+alt="Hello Future GIF"
+style={{
+position: 'absolute',
+top: 0,
+left: 0,
+width: '100%',
+height: '100%',
+objectFit: 'cover',
+zIndex: -1,
+}}
+/>
       
       <div className="container w-100 m-5">
         <div class=" ">
@@ -144,22 +161,10 @@ const FileUpload = () => {
     
         
 
-      <img
-  src={giff}
-  alt="Hello Future GIF"
-  style={{
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    width: '100%',
-    height: '100%',
-    objectFit: 'cover',
-    zIndex: -1,
-  }}
-/>
+     
 
       <div id='uploads' style={{ textAlign: 'center', marginTop: '10px' }} className="container my-10">
-        <form style={{backgroundColor: 'transparent', color:'black'}} className='text-center' onSubmit={handleUploadAndPredict} >
+        <form style={{ color:'black'}} className='text-center' onSubmit={handleUploadAndPredict} >
           <input type='file' style={{ display: 'block', margin: '0 auto', width: '500px', color: '#fff' }} className='form-control' onChange={handleChange} />
           <button type='submit' style={{ display: 'block', margin: '10px auto' }} className="btn btn-success mb-3">Upload</button>
          
@@ -284,6 +289,7 @@ const FileUpload = () => {
       </div>
     
        <Footer/>
+       </div>
     </>
   );
 
